@@ -4,18 +4,23 @@
 'Oregano', cursive;*/
 
 
-/*a37409  704102  bf9756 735c3f #FFF9DB*/
+/*a37409  704102 f2c48d bf9756 735c3f #FFF9DB  d4ae59*/
 
-:root {
-    --primary: #F2E6C2;
-    --secondry: #735c3f;
-    --fontHover: #f2c48d;
+ :root {
+    --primary: #d4ae59;
+    --secondry: #704102;
+    --fontHover: #735c3f;
+    --shadowColor: rgb(224, 193, 126);
 }
 
 main {
     overflow: hidden;
     font-family: "Oregano", cursive;
     position: relative;
+}
+
+.nav {
+    background-color: #FFF;
 }
 
 .nav .nav-link {
@@ -25,11 +30,10 @@ main {
 
 .navbar {
     min-height: 80px;
-    background-color: var(--primary);
-    color: #fff !important;
+    background-color: var(--secondry);
 }
 
-.navbar.nav-item {
+.navbar .navbar-nav {
     text-align: center;
 }
 
@@ -40,11 +44,12 @@ button {
 
 .navbar .nav-link {
     font-size: 20px;
+    color: var(--primary) !important;
     letter-spacing: 0.5px;
 }
 
-.carousel-item {
-    height: 200px;
+.carousel-item img {
+    max-height: 400px;
 }
 
 
@@ -53,15 +58,18 @@ button {
 section h1 {
     color: var(--primary);
     font-weight: 700;
-    font-size: max(2vw, 30px);
+    font-size: max(2vw, 45px);
+    margin: 40px 0;
 }
 
-.services,
+
+/* .services,
 .blogs {
     width: 70%;
-}
+} */
 
 .services .card {
+    font-size: 1.4rem;
     box-shadow: 0px 6px 12px -2px var(--primary);
     overflow: hidden;
     border-radius: 30% 70% 12% 88% / 91% 8% 92% 9% !important;
@@ -69,6 +77,20 @@ section h1 {
     -moz-border-radius: 30% 70% 12% 88% / 91% 8% 92% 9% !important;
     -ms-border-radius: 30% 70% 12% 88% / 91% 8% 92% 9% !important;
     -o-border-radius: 30% 70% 12% 88% / 91% 8% 92% 9% !important;
+}
+
+.services .row {
+    margin-top: 50px;
+}
+
+.modal-dialog {
+    margin: 0;
+    max-width: 100%;
+}
+
+.modal-content>img {
+    width: 100%;
+    height: 400px;
 }
 
 
@@ -96,7 +118,7 @@ section h1 {
 
 .card-body {
     font-size: 17px;
-    color: var(#735c3f);
+    color: var(--fontHover);
 }
 
 .whatsappIcon {
@@ -104,33 +126,37 @@ section h1 {
 }
 
 .mapDiv {
-    max-height: 300px;
+    max-height: 400px;
     overflow: hidden;
+    margin-top: 80px;
 }
 
 .info {
     background-color: var(--primary);
     height: 100%;
-    color: #fff;
-    padding-top: 40px;
+    /* color: #fff; */
+    color: var(--fontHover);
+    padding-top: 55px;
     top: 0px;
+    font-size: 1.2rem;
+}
+
+.info div {
+    padding-top: 55px;
 }
 
 .blogs .card {
     box-shadow: 0px 6px 12px -2px var(--primary);
     text-align: justify;
     border: 0;
+    border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -ms-border-radius: 20px 20px 20px 20px;
+    -o-border-radius: 20px 20px 20px 20px;
 }
 
-.blogs .card-body {
-    border-radius: 0 0 10px 10px;
-    -webkit-border-radius: 0 0 10px 10px;
-    -moz-border-radius: 0 0 10px 10px;
-    -ms-border-radius: 0 0 10px 10px;
-    -o-border-radius: 0 0 10px 10px;
-}
-
-.blogs h6 {
+.blogs h5 {
     top: -19px;
     background-color: var(--primary);
     padding: 6px 16px;
@@ -138,7 +164,7 @@ section h1 {
 }
 
 .blogs p {
-    font-size: 11px;
+    font-size: 1.4rem;
 }
 
 .blogs a {
@@ -146,18 +172,71 @@ section h1 {
     color: var(--primary)
 }
 
+.blogs img {
+    border-radius: 20px 20px 0px 0px;
+    -webkit-border-radius: 20px 20px 0px 0px;
+    -moz-border-radius: 20px 20px 0px 0px;
+    -ms-border-radius: 20px 20px 0px 0px;
+    -o-border-radius: 20px 20px 0px 0px;
+}
+
 .blogs a:hover {
     color: var(--fontHover)
 }
 
 footer {
-    background-color: #fff;
-    color: var(--secondry);
+    background-color: var(--secondry);
+    color: var(--primary);
     width: 100%;
 }
 
 footer .col {
     text-align: justify;
+}
+
+footer .clinic {
+    margin-inline-start: 90px!important;
+}
+
+
+/*about us style*/
+
+.doctors .card-img {
+    top: -50px;
+    position: absolute;
+    left: 0
+}
+
+.doctors img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: var(--shadowColor) 0px 3px 8px;
+}
+
+.doctors .row {
+    justify-content: center;
+}
+
+.doctors .col {
+    position: relative;
+    /* border: .25px solid var(--primary); */
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin: 10px;
+    box-shadow: var(--primary) 0px 6px 12px -2px, var(--shadowColor) 0px 3px 7px -3px;
+}
+
+.doctors .card-body {
+    padding-top: 90px;
+    height: fit-content;
 }
 
 
@@ -173,11 +252,24 @@ iframe {
 }
 
 .contactsCards {
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    color: var(--fontHover);
+    text-align: justify;
+    font-size: 25px;
+    border-radius: 8x;
+    -moz-border-radius: 8x;
+    -ms-border-radius: 8x;
+    -o-border-radius: 8x;
+    -webkit-border-radius: 8x;
+}
+
+.contactsCards span {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    line-height: 70px;
+    text-align: center;
+    display: block;
 }
 
 
@@ -190,10 +282,11 @@ iframe {
 
 .blogPage .row:nth-of-type(odd) {
     background-color: var(--secondry);
-    color: var(--fontHover)
+    color: var(--primary)
 }
 
 @media (max-width: 1000px) {
+    /*tab mode*/
     nav .navbar-nav {
         width: 100%;
     }
@@ -207,9 +300,24 @@ iframe {
     footer .col {
         text-align: center;
     }
+    .doctors img {
+        width: 100px;
+        height: 100px;
+    }
+    .doctors h2 {
+        font-size: 20px;
+    }
+    .doctors .card-body {
+        padding-top: 50px;
+        font-size: 13px;
+    }
+    .modal-content>img {
+        height: auto;
+    }
 }
 
 @media(max-width:500px) {
+    /*mobile mode*/
     nav .col:last-child {
         display: none !important;
         /* visibility: hidden; */
@@ -217,6 +325,16 @@ iframe {
     nav .col:first-child {
         width: 100%;
         justify-content: center;
+    }
+    .doctors .card-img {
+        top: -30px;
+    }
+    .doctors img {
+        width: 60px;
+        height: 60px;
+    }
+    .doctors .card-body {
+        padding-top: 20px;
     }
 }
 
